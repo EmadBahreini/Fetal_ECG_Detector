@@ -1,6 +1,3 @@
 set-a-text/*
 set-b-text/*
-main copy.ipynb
-main.ipynb
-my-way.ipynb
-paper-way.ipynb
+experiments/*
