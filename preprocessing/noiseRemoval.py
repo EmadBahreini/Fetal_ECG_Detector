@@ -81,8 +81,9 @@ def _wander_removal(signal, cutoff=3.0, fs=1000, num_taps=1001,
         # Plot frequency response
         _plot_filter_response(freq, freq_resp)
 
-    # Apply the filter to the signal
-    # Preserves true shape (with constant delay)
+        # filtfilt applies the filter forward and backward, cancelling phase distortion.
+        #  This ensures that the ECG signal's important features, like the QRS complexes,
+        #  are not shifted or distorted by the filtering.
     filtered_signal = filtfilt(filter_taps, 1.0, signal)
 
 
